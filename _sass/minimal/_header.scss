@@ -1,0 +1,16 @@
+header {
+  width: 100%;
+  // margin: auto;
+  font-size: $h-size-heading2;
+  color: $theme-text-color;
+  margin-top: 4em;
+  margin-bottom: 1em;
+  letter-spacing: .2em;
+}
+
+header h1 {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  text-align: center;
+}

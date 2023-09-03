@@ -1,0 +1,95 @@
+.main {
+  float: left;
+  width: 85%;
+  margin-right: 2em;
+  margin-top: -1em;
+}
+
+.post {
+  //text-align: justify;
+  width: 100%;
+}
+
+.post-header {
+  font-size: $h-size-heading2;
+}
+
+.post-header h2 {
+  margin-bottom: 0em;
+}
+
+.post-header time {
+  font-size: 1.0625rem; // TODO To fix error size
+  color: gray;
+}
+
+section {
+  font-size: $h-size-body;
+}
+
+section blockquote {
+  margin-left: 0;
+  padding-left: 1em;
+  border-left: 0.25rem solid gray;
+}
+
+section img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: .5em;
+  max-width: 40em;
+}
+
+/* .raw, .horizon, .vertical {
+  padding-top: .5em;
+  align-items: center;
+}
+
+.horizon img {
+  height: 25vh;
+}
+
+.vertical img {
+  height: 80vh;
+  object-fit: cover;
+}
+*/
+
+.horizon {
+  width: 100%;
+  height: 25vh;
+}
+
+.vertical {
+  width: 100%;
+  height: 80vh;
+}
+
+section pre {
+  width: auto;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  padding-left: 20px;
+  background-color: #EFEFEF;
+  font-size: $h-size-caption;
+  border-radius: .4em;
+
+  overflow-x: auto; //TODO To be optimismed
+  overflow-y: hidden;
+}
+
+code:not(pre code) {
+  border-radius: .4em;
+  background-color: #EFEFEF;
+  padding: 0.2rem;
+}
+
+section pre span {
+	float: none;
+	margin-left: 1rem;
+	font-size: $h-size-caption;
+}
+
+section iframe {
+	width: 100%;
+}

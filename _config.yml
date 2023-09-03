@@ -1,0 +1,62 @@
+
+title: Tubyy's memo
+
+# Build settings
+markdown: kramdown
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+
+permalink: /:categories/:title/
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/
+
+include:
+  - _pages
+
+collections:
+  timelines:
+    output: true
+    
+# collections:
+#   splashs:
+#     output: true
+#     permalink: /:collections/:path/
+  
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+  
+  # _timeline
+  - scope:
+      path: ""
+      type: timelines
+    values:
+      layout: timeline
+
+  # _page
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+
+  
+
+  # _imgae
+  # - scope:
+  #     path: "_splash"
+  #     type: splash
+  #   values:
+  #     layout: splash

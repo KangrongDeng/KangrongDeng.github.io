@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+{% if paginator %}
+  {% assign posts = paginator.posts %}
+{% else %}
+  {% assign posts = site.posts %}
+{% endif %}
+
+<div class="archive">
+  {% for post in posts %}
+      {% include archive-single.html %}
+  {% endfor %}
+</div>
+{% include pagination.html %}
