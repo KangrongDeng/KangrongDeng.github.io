@@ -3,8 +3,6 @@ main:
     url: "/"
   - title: "Archive"
     url: "/archive/"
-  - title: "splash"
-    url: "/splash"
   - title: "timeline"
     url: "/timeline"
   - title: "About"
