@@ -1,0 +1,157 @@
+:root {
+	font-family: -apple-system,"SF Pro Display","Arial",sans-serif;
+	font-weight: 300;
+	line-height: 36px;
+	--scale: 2;
+	--opacity: 1;
+	--link-color: #ca1f1f;
+	--link-color-dark: #F4CA45;
+	--rating-color: #03a89e;
+	--h-size-heading1: 2.5rem;
+	--h-size-heading2: 2.5rem;
+	--h-size-heading3: 2.5rem;
+	--h-size-body: 1.5rem;
+	--h-size-subtitle: 1.25rem;
+}
+
+::selection {
+	color: white;
+	background-color: black;
+}
+a::selection {
+	color: var(--link-color);	
+	background-color: black;
+}
+#rating::selection {
+	color: var(--rating-color);
+}
+
+body {
+	margin: 10px 14px 60px 14px;
+	background-color: white;
+	min-height: 100vh;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	margin-top: 0vh;
+	transform: scale(var(--scale));
+	opacity: var(--opacity);
+}
+
+svg {
+	fill: black;
+}
+
+h1,
+h2 {
+	font-size: var(--h-size-heading1);
+	color: black;
+	margin: 0;
+	padding: 0;
+}
+
+.main {
+	margin-top: 6rem;
+	margin-bottom: 10vh;
+}
+
+h1 {
+	line-height: 5rem;
+	color: ;
+}
+h2 {
+	margin-bottom: 4px;
+}
+
+h1 img{
+	width: 6rem;	
+	border-radius: 3rem;
+}
+
+p {
+	margin: 0;
+	margin-bottom: 20px;
+	color: #6e6e73;
+	font-size: var(--h-size-body);
+}
+
+sup {
+	font-size: var(--h-size-subtitle);
+	vertical-align: super;
+	line-height: 0;
+}
+a {
+	color: var(--link-color);
+}
+
+a:hover {
+	color: #6e6e73;
+	text-decoration: none;
+}
+
+#rating {
+	color: var(--rating-color)!important;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+@media screen and (min-width: 914px) {
+	body {
+		width: 854px;
+		margin:10px auto;
+	}
+	h1 img{
+		width: 8rem;	
+		border-radius: 4rem;
+	}
+}
+
+@media print {
+	body,h1,h2 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	::selection {
+		color: black;
+		background-color: white;
+	}
+	a::selection{
+		color: var(--link-color-dark);	
+		background-color: white;
+	}
+	body {
+		color: #a1a1a6;
+		background: black;
+	}
+	svg {
+		fill: white;
+	}
+	a {
+		color: var(--link-color-dark);
+	}
+	a:hover {
+		color: #86868b;
+		text-decoration: none;
+	}
+	p {
+		color: #86868b;
+	}
+	h1,
+	h2{
+		color: #e6e6e6;
+	}
+}
